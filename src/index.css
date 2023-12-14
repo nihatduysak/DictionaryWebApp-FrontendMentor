@@ -11,7 +11,7 @@
 
 .dark-theme {
   --FFFFFF: #050505;
-
+  --F4F4F4: #1F1F1F;
   --2D2D2D: #FFF;
   
   & .switchContainer {
@@ -25,7 +25,6 @@
 }
 
 body {
-  width: 1280px;
   font-family: 'Inter', sans-serif;
   background: var(--FFFFFF, #FFF);
 }
@@ -38,11 +37,10 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1160px;
+  padding: 0 200px;
 }
 
 .header {
-  width: 736px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -92,7 +90,6 @@ body {
 }
 
 .searchBar {
-  width: 736px;
   margin: 50px auto 0 auto;
 
   & label {
@@ -123,7 +120,6 @@ body {
 .searchWords {
   display: flex;
   margin: 45px auto 0 auto;
-  width: 736px;
   justify-content: space-between;
 
   & .words {
@@ -152,8 +148,6 @@ body {
 }
 
 .noun {
-  width: 737px;
-  margin-left: 221px;
   margin-top: 40px;
 
   &  h3 {
@@ -211,7 +205,6 @@ body {
 
 .verb {
 
-  margin-left: 221px;
   margin-top: 40px;
 
   & h3 {
@@ -296,14 +289,132 @@ body {
   font-style: normal;
 }
 
-@media (width < 768px) {
-  body {
-    width: 768px;
+@media (width < 769px) {
+
+  .container {
+    padding: 0 100px;
   }
 }
 
-@media (width < 375px) {
-  body {
-    width: 375px;
+@media (width < 400px) {
+  
+  .container {
+    padding: 0 24px;
+  }
+
+  .selectStyle {
+
+    & p {
+      color: var(--2D2D2D, #2D2D2D);
+      text-align: right;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px; /* 171.429% */
+    }
+  }
+
+  .words {
+
+    & h1 {
+      color: var(--2D2D2D, #2D2D2D);
+      font-family: Inter;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    & p {
+      color: var(--A445ED, #A445ED);
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 133.333% */
+    }
+  }
+
+  .noun {
+
+    & h3 {
+      color: var(--2D2D2D, #2D2D2D);
+      font-family: Inter;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    & p {
+      color: var(--757575, #757575);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    & li {
+      color: var(--2D2D2D, #2D2D2D);
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 160% */
+    }
+  }
+
+  .synonyms {
+
+    & p {
+      color: var(--757575, #757575);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    & span p {
+      color: var(--A445ED, #A445ED);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  .verb {
+
+    & h3 {
+      color: var(--2D2D2D, #2D2D2D);
+      font-family: Inter;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    & p {
+      color: var(--757575, #757575);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    & li {
+      color: var(--2D2D2D, #2D2D2D);
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 160% */
+    }
   }
 }
