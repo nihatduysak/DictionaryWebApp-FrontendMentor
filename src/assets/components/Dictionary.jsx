@@ -13,15 +13,14 @@ export default function Dictionary({searchWord, setSearchWord, fetchWord }) {
         setSearchWord(e.target.searchInput.value)
         setError(false)
     }
+
     return (
         <>
             <div className={`searchBar ${error ? 'error' : ''}`}>
                 <form onSubmit={handleSearch}>
                     {error ? <input type="text" name="searchInput"  placeholder="Search for any word…" />
                         :
-                        
                         <input type="text" name="searchInput"  placeholder="search ..." />
-                    
                     }
                     {error && <p className="validation">Whoops, can’t be empty…</p>}
                 </form>

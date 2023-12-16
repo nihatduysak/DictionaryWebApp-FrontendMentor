@@ -1,4 +1,8 @@
-export default function Noun({ fetchWord }) {
+import React from 'react';
+
+export default function Noun({ fetchWord, setSearchWord }) {
+
+    console.log(fetchWord)
     return (
         <>
             {
@@ -21,7 +25,7 @@ export default function Noun({ fetchWord }) {
                                     fetchWord.meanings[0].synonyms &&
                                     fetchWord.meanings[0].synonyms.map((x, index) => {
                                         return (
-                                            <p key={index}>{x}</p>
+                                            <p className='synonymsP' onClick={e => {setSearchWord(e.target.textContent)}} key={index}>{x}</p>
                                         )
                                     })
                                 }
@@ -36,10 +40,10 @@ export default function Noun({ fetchWord }) {
                             
                             fetchWord.meanings[1].definitions.map((x, index) => {
                                 return (
-                                    <>
-                                        {x.definition && <li key={index}>{x.definition}</li>}
-                                        {x.example && <p key={index + 100} className="keyb">{`"${x.example}"`}</p>}
-                                    </>
+                                    <React.Fragment key={index}>
+                                        {x.definition && <li>{x.definition}</li>}
+                                        {x.example && <p className="keyb">{`"${x.example}"`}</p>}
+                                    </React.Fragment>
                                 )
                             })}
                         </ul>

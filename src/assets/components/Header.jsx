@@ -1,15 +1,28 @@
-export default function Header() {
+import { useEffect } from "react";
+
+export default function Header({ fontType, setFontType}) {
+
+    function handleFont() {
+        document.body.style.fontFamily = fontType;
+    }
+    
+    useEffect(() =>  {
+    handleFont()
+    }, [fontType])
+
     return (
         <div className="header">
             <div className="dictionaryIcon">
                 <img src="/images/iconoir_book.svg" alt="Dictionary Icon" />
             </div>
-
             <div className="headerLeftSide">
                 <div className="fontStyle">
                     <div className="selectStyle">
-                    <p>Sans Serif</p> 
-                    <a href="#"><img src="/images/arrow-down.png" alt="Arrow Down" /></a>
+                        <select onChange={e => setFontType(e.target.value)} name="fontType" className="FontSelect">
+                            <option value="Inter">Sans Serif</option>
+                            <option value="Lora">Serif</option>
+                            <option value="Inconsolata">Mono</option>
+                        </select>
                     </div>
                 </div>
                 <div className="lightDark">
