@@ -1,10 +1,12 @@
 import React from 'react';
 
-export default function Noun({ fetchWord, setSearchWord }) {
+export default function Noun({ fetchWord, setSearchWord,  }) {
 
-    console.log(fetchWord)
+    
+
     return (
         <>
+        
             {
                 fetchWord && 
                 <>
@@ -15,12 +17,14 @@ export default function Noun({ fetchWord, setSearchWord }) {
                             {fetchWord.meanings[0].definitions.map((x, index) => {
                                 return (
                                     <li key={index}>{x.definition}</li>
+
                                 )
                             })}
                         </ul>
                         <div className="synonyms">
                             <p>Synonyms</p>
                             <span>
+
                                 {
                                     fetchWord.meanings[0].synonyms &&
                                     fetchWord.meanings[0].synonyms.map((x, index) => {
@@ -29,6 +33,7 @@ export default function Noun({ fetchWord, setSearchWord }) {
                                         )
                                     })
                                 }
+
                             </span>
                         </div>
                     </div>
@@ -54,6 +59,7 @@ export default function Noun({ fetchWord, setSearchWord }) {
                     </div>
                 </>
             }
+
         </>
     )
 }

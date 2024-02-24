@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap');
 
+
 :root {
   --F4F4F4: #F4F4F4;
   --A445ED: #A445ED;
@@ -126,9 +127,7 @@ body {
 }
 
 .searchWords {
-  display: flex;
   margin: 45px auto 0 auto;
-  justify-content: space-between;
 
   & .words {
     display: flex;
@@ -151,6 +150,14 @@ body {
     font-weight: 400;
     line-height: normal;
   }
+}
+
+
+.phonetics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
 }
 
 .noun {
@@ -208,8 +215,13 @@ body {
     font-weight: 700;
     line-height: normal;
     cursor: pointer;
+
   }
 }
+
+/* .synonymsP {
+  cursor: pointer;
+} */
 
 .verb {
 
@@ -291,12 +303,19 @@ body {
   font-style: normal;
 }
 
+
+
+
 @media (width < 769px) {
 
   .container {
     padding: 0 100px;
   }
 }
+
+
+
+
 
 @media (width < 400px) {
   
@@ -412,5 +431,33 @@ body {
       font-weight: 400;
       line-height: 24px; /* 160% */
     }
+  }
+}
+
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  margin-top: 48px;
+
+
+  & h2 {
+    color: var(--2D2D2D, #2D2D2D);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  & p {
+    color: var(--757575, #757575);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
   }
 }
