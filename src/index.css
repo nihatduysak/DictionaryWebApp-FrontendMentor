@@ -158,6 +158,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px;
+
+  & img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  & img:hover {
+    transform: scale(1.2);
+  }
 }
 
 .noun {
@@ -215,13 +223,8 @@ body {
     font-weight: 700;
     line-height: normal;
     cursor: pointer;
-
   }
 }
-
-/* .synonymsP {
-  cursor: pointer;
-} */
 
 .verb {
 
