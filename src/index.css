@@ -309,18 +309,14 @@ body {
 
 
 
-@media (width < 769px) {
+@media (width < 780px) {
 
   .container {
     padding: 0 100px;
   }
 }
 
-
-
-
-
-@media (width < 400px) {
+@media (width < 450px) {
   
   .container {
     padding: 0 24px;
